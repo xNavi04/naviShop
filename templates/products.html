@@ -1,0 +1,70 @@
+{% include "footer2.html" %}
+<style>
+  .equal-sized-image {
+    width: 500px; /* Dostosuj szerokość, aby pasowała do twoich potrzeb */
+    height: 350px; /* Dostosuj wysokość, aby pasowała do twoich potrzeb */
+    object-fit: cover; /* Zachowaj proporcje obrazu, przycinać je, aby pasował do okna */
+  }
+</style>
+
+
+
+<section style="margin-top: 150px;">
+  <div class="text-center container">
+    <h4 class="mt-4 mb-5 text-white"><strong>Produkty</strong></h4>
+    <div class="container my-1 my-5">
+
+    <form method="get" action="{{ url_for('productsPage') }}" >
+        <div class="row g-3">
+            <div class="col-lg-3">
+                <select class="form-select" id="exampleSelect" name="category">
+                    <option value="">Wszystkie kategorie</option>
+                    {% for category in categories %}
+                    <option value="{{category.id}}" {% if category_value==category.id %} selected {% endif %}>{{category.name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <select class="form-select" name="price">
+                    <option value="">Wszystkie ceny</option>
+                    <option value="1" {% if valuee==1 %} selected  {% endif %}>poniżej 500PLN</option>
+                    <option value="2" {% if valuee==2 %} selected  {% endif %}>500PLN-1000PLN</option>
+                    <option value="3" {% if valuee==3 %} selected  {% endif %}>1000PLN-5000PLN</option>
+                    <option value="4" {% if valuee==4 %} selected  {% endif %}>powyżej 5000PLN</option>
+                </select>
+            </div>
+            <div class="col-lg-1">
+                <button type="submit" class="btn btn-outline-success" data-mdb-ripple-init data-mdb-ripple-color="dark">Wybierz</button>
+            </div>
+        </div>
+    </form>
+
+    </div>
+    <div class="row">
+      {% for product in products %}
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+          <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+            <img src="data:{{ product.image_mimetype }};base64,{{ b64encode(product.image).decode('utf-8') }}" class="equal-sized-image">
+            <a href="{{ url_for('oneProduct', num=product.id) }}">
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+          <div class="card-body">
+            <a href="{{ url_for('oneProduct', num=product.id) }}" class="text-reset">
+              <h5 class="card-title mb-3">{{product.name}}</h5>
+            </a>
+            <a href="" class="text-reset">
+              <p>{{product.category.name}}</p>
+            </a>
+            <h6 class="mb-3">PLN {{product.price}}</h6>
+          </div>
+        </div>
+      </div>
+     {% endfor %}
+    </div>
+  </div>
+</section>
+{% include "footer.html" %}

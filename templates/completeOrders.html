@@ -1,0 +1,44 @@
+{% include 'footer2.html' %}
+<div class="col-lg-12 df-flex justify-content-center mx-auto rounded-6" style="background-color: white; margin-top: 100px; margin-bottom: 150px; transform: scale(0.8);">
+    <table id="myTable" class="display" style="width:100%;">
+        <thead>
+            <tr>
+                <th>order_id</th>
+                <th>products</th>
+                <th>amount_total</th>
+                <th>city</th>
+                <th>line_1</th>
+                <th>line_2</th>
+                <th>postal_code</th>
+                <th>country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{order.id}}</td>
+                <td>{{order.body}}</td>
+                <td>{{order.amount_total}}</td>
+                <td>{{order.city}}</td>
+                <td>{{order.line_1}}</td>
+                <td>{{order.line_2}}</td>
+                <td>{{order.postal_code}}</td>
+                <td>{{order.country}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>order_id</th>
+                <th>products</th>
+                <th>amount_total</th>
+                <th>city</th>
+                <th>line_1</th>
+                <th>line_2</th>
+                <th>postal_code</th>
+                <th>country</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+{% include 'footer.html' %}

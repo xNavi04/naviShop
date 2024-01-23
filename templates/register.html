@@ -1,0 +1,31 @@
+{% include 'footer2.html' %}
+<div class="container d-flex justify-content-center py-5" style="margin-top: 200px;">
+<form class="col-lg-3" method="POST" novalidate>
+    <h1 class="text-white">sklep.com</h1>
+    <h1 class="h3 mb-3 fw-normal text-white">Rejestracja</h1>
+
+    <div class="form-floating mb-2">
+      <input class="form-control" name="username" placeholder="Nazwa użytkownika">
+      <label for="floatingInput">Nazwa użytkownika</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="email" class="form-control"  name="email" id="floatingInput" placeholder="Email">
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Hasło">
+      <label for="floatingPassword">Hasło</label>
+    </div>
+    <div class="form-floating mb-2">
+      <input type="password" class="form-control" name="confirmPassword" placeholder="Hasło">
+      <label for="floatingPassword">Hasło</label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Zarejestruj się</button>
+    {% for alert in alerts %}
+   <small style="color: red">{{ alert }}<br></small>
+    {% endfor %}
+  </form>
+</div>
+
+
+{% include 'footer.html' %}
