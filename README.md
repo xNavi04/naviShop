@@ -1,4 +1,5 @@
-## Sklep Internetowy https://navishop.azurewebsites.net/🛍️
+## Sklep Internetowy 🛍️
+## https://navishop.azurewebsites.net/
 
 ### Opis 📝
 Program służy do **handlu internetowego**, przeznaczony do sprzedaży dowolnych produktów. Posiada wiele funkcji, które ułatwiają zarówno sprzedawcom, jak i klientom korzystanie ze sklepu.
