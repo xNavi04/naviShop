@@ -1,5 +1,7 @@
 ## Online Store 🛍️
 ## https://navishop.azurewebsites.net/
+email: adminKing@gmail.com
+password: MiskaBarmana07#
 
 ### Description 📝
 The program is designed for **online trading**, intended for the sale of any products. It has many features that make it easy for both sellers and customers to use the store.
@@ -34,6 +36,8 @@ password: MiskaBarmana07#
 
 ## Sklep Internetowy🛍️
 ## https://navishop.azurewebsites.net/
+email: adminKing@gmail.com
+password: MiskaBarmana07#
 
 ### Opis 📝
 Program służy do **handlu internetowego**, przeznaczony do sprzedaży dowolnych produktów. Posiada wiele funkcji, które ułatwiają zarówno sprzedawcom, jak i klientom korzystanie ze sklepu.
